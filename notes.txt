@@ -7,9 +7,41 @@
 --------------------------------------------------------------------------------
 
 
-Create a Peer to Peer payment dApp, Part 1
+Create a Peer to Peer payment dApp, Part 01
 Part one of a two-part tutorial that explains how to create a P2P payment dApp on Polygon
 https://learn.figment.io/tutorials/peer-to-peer-payment-on-polygon-part-1
+
+
+
+Create a Peer to Peer payment dApp, Part 02
+Part two of a two-part tutorial that explains how to create a P2P payment dApp on Polygon
+https://learn.figment.io/tutorials/peer-to-peer-payment-on-polygon-part-2
+
+
+
+web3.js - Ethereum JavaScript API
+https://web3js.readthedocs.io/en/v1.5.2/
+
+
+
+
+A crypto wallet & gateway to blockchain apps
+https://metamask.io/
+
+
+
+
+https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
+
+
+
+
+https://hardhat.org/
+https://hardhat.org/getting-started/
+
+
+
+
 
 
 
@@ -35,6 +67,8 @@ https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
 
 
 --------------------------------------------------------------------------------
+
+
 p2p-payment-dapp
 
 npx create-next-app p2p-payment-dapp
@@ -54,6 +88,18 @@ npx hardhat test
 npx hardhat clean
 
 code .
+
+
+--------------------------------------------------------------------------------
+
+
+npm install -D @openzeppelin/contracts
+
+npm install -D web3
+
+npm install -D dotenv
+
+npm install -D tailwindcss
 
 
 
@@ -96,6 +142,213 @@ npx hardhat test --show-stack-traces
 --------------------------------------------------------------------------------
 
 
+npx hardhat run scripts/deploy.js
+
+
+Deploying contracts with the account:  0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+Account balance:                       10000000000000000000000
+PaymentToken deployed to:              0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+
+--------------------------------------------------------------------------------
+
+
+npx hardhat node
+
+
+Started HTTP and WebSocket JSON-RPC server at http://127.0.0.1:8545/
+
+
+WARNING: These accounts, and their private keys, are publicly known.
+Any funds sent to them on Mainnet or any other live network WILL BE LOST.
+
+Account #0: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 (10000 ETH)
+Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+Account #1: 0x70997970c51812dc3a010c7d01b50e0d17dc79c8 (10000 ETH)
+Private Key: 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
+
+Account #2: 0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc (10000 ETH)
+Private Key: 0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a
+
+Account #3: 0x90f79bf6eb2c4f870365e785982e1f101e93b906 (10000 ETH)
+Private Key: 0x7c852118294e51e653712a81e05800f419141751be58f605c371e15141b007a6
+
+Account #4: 0x15d34aaf54267db7d7c367839aaf71a00a2c6a65 (10000 ETH)
+Private Key: 0x47e179ec197488593b187f80a00eb0da91f1b9d0b13f8733639f19c30a34926a
+
+Account #5: 0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc (10000 ETH)
+Private Key: 0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba
+
+Account #6: 0x976ea74026e726554db657fa54763abd0c3a0aa9 (10000 ETH)
+Private Key: 0x92db14e403b83dfe3df233f83dfa3a0d7096f21ca9b0d6d6b8d88b2b4ec1564e
+
+Account #7: 0x14dc79964da2c08b23698b3d3cc7ca32193d9955 (10000 ETH)
+Private Key: 0x4bbbf85ce3377467afe5d46f804f221813b2bb87f24d81f60f1fcdbf7cbf4356
+
+Account #8: 0x23618e81e3f5cdf7f54c3d65f7fbc0abf5b21e8f (10000 ETH)
+Private Key: 0xdbda1821b80551c9d65939329250298aa3472ba22feea921c0cf5d620ea67b97
+
+Account #9: 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 (10000 ETH)
+Private Key: 0x2a871d0798f97d79848a013d4936a73bf4cc922c825d33c1cf7073dff6d409c6
+
+Account #10: 0xbcd4042de499d14e55001ccbb24a551f3b954096 (10000 ETH)
+Private Key: 0xf214f2b2cd398c806f84e317254e0f0b801d0643303237d97a22a48e01628897
+
+Account #11: 0x71be63f3384f5fb98995898a86b02fb2426c5788 (10000 ETH)
+Private Key: 0x701b615bbdfb9de65240bc28bd21bbc0d996645a3dd57e7b12bc2bdf6f192c82
+
+Account #12: 0xfabb0ac9d68b0b445fb7357272ff202c5651694a (10000 ETH)
+Private Key: 0xa267530f49f8280200edf313ee7af6b827f2a8bce2897751d06a843f644967b1
+
+Account #13: 0x1cbd3b2770909d4e10f157cabc84c7264073c9ec (10000 ETH)
+Private Key: 0x47c99abed3324a2707c28affff1267e45918ec8c3f20b8aa892e8b065d2942dd
+
+Account #14: 0xdf3e18d64bc6a983f673ab319ccae4f1a57c7097 (10000 ETH)
+Private Key: 0xc526ee95bf44d8fc405a158bb884d9d1238d99f0612e9f33d006bb0789009aaa
+
+Account #15: 0xcd3b766ccdd6ae721141f452c550ca635964ce71 (10000 ETH)
+Private Key: 0x8166f546bab6da521a8369cab06c5d2b9e46670292d85c875ee9ec20e84ffb61
+
+Account #16: 0x2546bcd3c84621e976d8185a91a922ae77ecec30 (10000 ETH)
+Private Key: 0xea6c44ac03bff858b476bba40716402b03e41b8e97e276d1baec7c37d42484a0
+
+Account #17: 0xbda5747bfd65f08deb54cb465eb87d40e51b197e (10000 ETH)
+Private Key: 0x689af8efa8c651a91ad287602527f3af2fe9f6501a7ac4b061667b5a93e037fd
+
+Account #18: 0xdd2fd4581271e230360230f9337d5c0430bf44c0 (10000 ETH)
+Private Key: 0xde9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0
+
+Account #19: 0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199 (10000 ETH)
+Private Key: 0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e
+
+WARNING: These accounts, and their private keys, are publicly known.
+Any funds sent to them on Mainnet or any other live network WILL BE LOST.
+
+
+
+--------------------------------------------------------------------------------
+
+
+npx hardhat run scripts/deploy.js --network localhost
+
+
+Deploying contracts with the account:  0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+Account balance:                       10000000000000000000000
+PaymentToken deployed to:              0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+
+--------------------------------------------------------------------------------
+
+
+A L C H E M Y
+
+https://dashboard.alchemyapi.io/apps
+
+
+--------------------------------------------------------------------------------
+
+
+P O L Y G O N   F A U C E T
+
+https://faucet.polygon.technology/
+
+Account #0: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+
+--------------------------------------------------------------------------------
+
+
+npx hardhat run dapp/scripts/deploy.js --network polygon_mumbai
+
+
+Deploying contracts with the account:  0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+Account balance:                       500000000000000000
+PaymentToken deployed to:              0xB11F73Ac64dbd8846D58Ee80276918204287Db7C
+
+
+--------------------------------------------------------------------------------
+
+
+A L C H E M Y  (explorer)
+
+
+{
+  "jsonrpc": "2.0", 
+  "id": 20, 
+  "result": {
+    "transactionHash": "0xfed01fb2f6e5d7e87b60026223ac37b7af674d1b7c88963f88ff72e01a01799b", 
+    "blockHash": "0x578f988cc6ec74cef6d88ae93ebce4e5fc312e3a8c19470c63c8ab7279b86874", 
+    "blockNumber": "0x172d5b5", 
+    "contractAddress": "0xb11f73ac64dbd8846d58ee80276918204287db7c", 
+    "cumulativeGasUsed": "0x482c6f", 
+    "effectiveGasPrice": "0x77359400", 
+    "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", 
+    "gasUsed": "0xb7412", 
+    "logs": [
+      {
+        "address": "0xb11f73ac64dbd8846d58ee80276918204287db7c", 
+        "topics": [
+          "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef", 
+          "0x0000000000000000000000000000000000000000000000000000000000000000", 
+          "0x000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+        ], 
+        "data": "0x00000000000000000000000000000000000000000000152d02c7e14af6800000", 
+        "blockNumber": "0x172d5b5", 
+        "transactionHash": "0xfed01fb2f6e5d7e87b60026223ac37b7af674d1b7c88963f88ff72e01a01799b", 
+        "transactionIndex": "0x3", 
+        "blockHash": "0x578f988cc6ec74cef6d88ae93ebce4e5fc312e3a8c19470c63c8ab7279b86874", 
+        "logIndex": "0xb", 
+        "removed": false
+      }, 
+      {
+        "address": "0x0000000000000000000000000000000000001010", 
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63", 
+          "0x0000000000000000000000000000000000000000000000000000000000001010", 
+          "0x000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266", 
+          "0x000000000000000000000000be188d6641e8b680743a4815dfa0f6208038960f"
+        ], 
+        "data": "0x00000000000000000000...", 
+        "blockNumber": "0x172d5b5", 
+        "transactionHash": "0xfed01fb2f6e5d7e87b60026223ac37b7af674d1b7c88963f88ff72e01a01799b", 
+        "transactionIndex": "0x3", 
+        "blockHash": "0x578f988cc6ec74cef6d88ae93ebce4e5fc312e3a8c19470c63c8ab7279b86874", 
+        "logIndex": "0xc", 
+        "removed": false}
+      ], 
+      "logsBloom": "0x0000000000000000...", 
+      "status": "0x1", 
+      "to": null, 
+      "transactionIndex": "0x3", 
+      "type": "0x2"
+    }
+  }
+
+
+
+--------------------------------------------------------------------------------
+
+
+Polygon PoS Chain Explorer 
+
+https://polygonscan.com/address/0xb11f73ac64dbd8846d58ee80276918204287db7c
+
+
+--------------------------------------------------------------------------------
+
+
+G I T H U B
+
+
+git remote add origin https://github.com/marcusvbrangel/payment-dapp.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
 
 --------------------------------------------------------------------------------
 
@@ -104,7 +357,6 @@ npx hardhat test --show-stack-traces
 --------------------------------------------------------------------------------
 
 
---------------------------------------------------------------------------------
 
 
 --------------------------------------------------------------------------------
@@ -112,5 +364,28 @@ npx hardhat test --show-stack-traces
 
 
 --------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
 
 

@@ -12,5 +12,6 @@
   "editor.padding.top": 20,
   "editor.quickSuggestionsDelay": 100,
   "editor.snippetSuggestions": "top",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": false,
+  "solidity.defaultCompiler": "localNodeModule"
 }
