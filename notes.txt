@@ -343,10 +343,19 @@ G I T H U B
 
 git remote add origin https://github.com/marcusvbrangel/payment-dapp.git
 git branch -M main
-git push -u origin main
+git push -u origin developer
 
 
-
+Enumerating objects: 50, done.
+Counting objects: 100% (50/50), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (50/50), 184.09 KiB | 8.00 MiB/s, done.
+Total 50 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/marcusvbrangel/payment-dapp.git
+ * [new branch]      developer -> developer
+Branch 'developer' set up to track remote branch 'developer' from 'origin'.
 
 
 
