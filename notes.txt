@@ -362,8 +362,44 @@ Branch 'developer' set up to track remote branch 'developer' from 'origin'.
 --------------------------------------------------------------------------------
 
 
+ALCHEMY DOCUMENTATION
+https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft
+
+
+HARDHAT DOCUMENTATION
+https://hardhat.org/getting-started/
+
+
+HARDHAT TUTORIAL FOR BEGINNERS
+https://hardhat.org/tutorial/
+
+
+POLYGON APPLICATION DEVELOPMENT
+https://docs.polygon.technology/docs/develop/getting-started/
+
+
+INTEGRATE WITH POLYGON
+https://docs.polygon.technology/docs/integrate/quickstart/
+
+
+POLYGON WITH ALCHEMY
+https://docs.polygon.technology/docs/develop/alchemy/
+
+
+POLYGON WITH HARDHAT
+https://docs.polygon.technology/docs/develop/hardhat/
+
+
+POLYGON WITH TRUFFLE
+https://docs.polygon.technology/docs/develop/truffle/
+
+
+OPEN ZEPPELIN CONTRACTS - ERC20
+https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
+
 
 --------------------------------------------------------------------------------
+
 
 
 
